@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: 'Verdana';
+    background-color: rgb(151, 219, 236, 30%);
+}
+/* Hintergrund 100% */
+.notice-bg {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 355px;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    margin-top: 50px;
+    font-weight: 800;
+    font-size: 40px;
+}
+/* Div Container zum Öffnen newContent */
+.startNotiz {
+    position: absolute;
+    top: 200px;
+    width: 600px;
+    height: auto;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 2px 10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.startNotiz:hover {
+    box-shadow: rgba(121, 94, 242, 0.8) 0px 2px 15px;
+}
+/* automatischer Text im Eingabefeld*/
+.placeholder {
+    color:rgb(0 0 0 / 60%);
+    font-size: 16px;
+    width: 540px;
+}
+/* Icon Liste*/
+.noticeIcon {
+    width: 25px;
+    height: 25px;
+    padding: 13px;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.noticeIcon:hover {
+    background-color: rgba(121, 94, 242, 0.3);
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 100;
+    padding: 13px;
+}
+/* Tooltip nicht sichtbar*/
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 12px;
+    width: 80px;
+    background-color: rgb(90, 89, 89);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    position: absolute;
+    top: 58px;
+    right: -9px; 
+}
+/* Tooltip beim hovern sichtbar*/
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/* beim Klick auf startNotiz öffnet sich:*/
+.newContent {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+/* Style der 2 Textareas*/
+.newContent textarea {
+    resize: none;
+    outline: none;
+    font-family: 'Verdana';
+    border: none;
+    width: 490px;
+    height: 100%;
+}
+
+/* Titel --> 1. Textarea*/
+.title {
+    font-size: 20px;
+}
+/* Notice --> 2. Textarea*/
+.notice {
+    font-size: 16px;
+}
+/* Button zum Speichern der Eingaben der Textareas*/
+.saveNotice {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lavender;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* neues Fenster zum Anzeigen der gespeicherten Notiz*/
+#addPost {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    position: absolute;
+    top: 350px;
+}
+/* Inhalt des Fenster #addPost*/
+.savedMessages {
+    width: 200px;
+    min-height: 85px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    word-break: break-all;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.savedMessages:hover {
+    background-color: lavender;
+    box-shadow: rgb(0 0 0 / 35%) 0px 2px 10px;
+    transition: 0.3s;
+}
+/* delete Icon*/
+.deleteImg {
+    width: 20px;
+    height: 23px;
+}
+
+.deleteImg:hover {
+    filter: drop-shadow(1px 1px 1px black);
+    cursor: pointer;
+    width: 21px;
+    height: 24px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 189px;
+    left: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 200px;
+    padding: 20px 0 20px 20px;
+    cursor: pointer;
+}
+
+.nav a:hover {
+    background-color: rgba(121, 94, 242, 0.3);
+    border-radius: 50px;
+    padding: 20px 0 20px 20px;
+}
+
+.navClick {
+    background-color: rgba(121, 94, 242, 0.3);
+    border-radius: 50px;
+    padding: 20px 0 20px 20px;
+}
+
+.input {
+    position: absolute;
+    top: 20px;
+}
+
+.noticeInput {
+    font-size: 15px;
+    position: absolute;
+    background: transparent;
+    margin-left: 29px;
+    top: 18px;
+}
+
+@media (max-width: 1100px) { 
+    .startNotiz {
+        width: 500px;    
+    }
+}
+
+@media (max-width: 1006px) { 
+    .startNotiz {
+        width: 400px;    
+    }
+
+    .newContent textarea {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) { 
+    h1 {
+        font-size: 27px;
+    }
+    .startContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .nav { 
+       flex-direction: initial;
+       position: initial;
+    }
+
+    .nav a {
+        width: 145px;
+        padding: 13px 0px 13px 0;
+        text-align: center;
+    }
+
+    .nav a:hover {
+        padding:13px 0px 13px 0;
+    }
+
+    .startNotiz {
+        width: 476px; 
+    }     
+}
+
+@media (max-width: 520px) { 
+    .startNotiz {
+        width: 366px;
+    } 
+    .newContent textarea {
+        width: 366px;
+    }
+    #addPost {
+        top: 350px;
+    }
+}
+
+@media (max-width: 403px) { 
+    .startNotiz {
+        width: 330px;
+    }  
+
+    .newContent textarea {
+        width: 330px;
+    }
+}

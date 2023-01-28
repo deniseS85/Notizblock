@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Notizblock</title>
+</head>
+<body onload="render(); load()">
+
+    <h1>Notizblock</h1>
+
+    <div class="startContent">
+        <nav class="nav">
+            <a id="start" onclick="load()">Start</a>
+            <a id="basket" onclick="loadTrash()">Papierkorb</a>
+        </nav>
+
+        <div id="parentContainer" class="notice-bg"> 
+            <div id="contentNotice" class="startNotiz"></div>
+            <div id="addPost"></div>
+        </div>
+    </div>
+   
+
+</body>
+</html>
